@@ -13,6 +13,10 @@ venv/
 .mypy_cache/
 .pytest_cache/
 
+# Persoonlijk rommel
+# .tools is eigen gereedschap voor deze map (md2pdf), geen studiemateriaal.
+.tools/
+
 # ── Persoonlijke werkmapinstellingen ─────────────────────────────────
 # .claude bevat je lokale toestemmingen voor Claude Code — persoonlijk,
 # en niet iets waar een medestudent of docent iets aan heeft.

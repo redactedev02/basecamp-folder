@@ -1,5 +1,11 @@
 # Werkafspraken voor Claude in deze map
 
+> **Wat dit bestand doet: Claude beperken, niet aansturen.** Dit is de studie-modus
+> voor deze map. Het legt vast wat Claude bij beoordeeld schoolwerk juist *niet* mag —
+> geen code schrijven, geen kant-en-klare oplossingen, geen tekst die ik inlever.
+> Het werk in deze repo is van mij. Claude komt niet verder dan uitleg, meedenken over
+> mijn eigen fouten, en gereedschap als git en de terminal.
+
 Deze map bevat **beoordeeld schoolwerk** voor Basecamp INFBSC02 (HR Informatica).
 De regels hieronder zijn de vertaling van §4.5 "Richtlijnen voor het gebruik van AI"
 uit `lesmateriaal/Basecamp INFBSC02 - Cursushandleiding 2026-2027.pdf` (p. 13–14) naar
