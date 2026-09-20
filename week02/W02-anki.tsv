@@ -1,0 +1,95 @@
+#separator:Tab
+#html:true
+#notetype:Basic
+#deck:Basecamp::Week 02
+#columns:Front	Back	Tags
+#tags column:3
+Wat is een branching program en wat is het verschil met week 1?	Een programma met beslispunten. In week 1 liep elke regel altijd, nu bepaalt een voorwaarde welk pad wordt gelopen.	week02::basis
+Wat is een conditie?	Een vraag die True of False oplevert en die bepaalt welk pad het programma neemt.	week02::basis
+Wat is de body van een if-statement?	Het ingesprongen blok eronder. De inspringing van 4 spaties bepaalt wat erbij hoort. Python gebruikt geen accolades.	week02::basis
+Waarvoor maak je een flowchart voordat je code schrijft?	Om al je beslispaden zichtbaar en compleet te maken voordat je in code duikt. Dan zie je welke gevallen je vergeet.	week02::werkwijze
+Met welk commando controleer je welke Python-versie je hebt?	<code>py --version</code> of <code>python --version</code> in de terminal.	week02::setup
+Hoe voer je een Python-bestand uit vanaf de opdrachtregel?	<code>py bestand.py</code> (of <code>python bestand.py</code>) in de map waar het bestand staat.	week02::setup
+Wat is de Python shell (REPL) en waarvoor gebruik je hem?	Een interactieve omgeving waarin je een regel typt en meteen antwoord krijgt. Bedoeld voor kleine experimenten, niet voor een heel programma.	week02::setup
+Waarom toont de shell de waarde van <code>num</code> als je alleen de naam typt, en een script niet?	De shell echoot het resultaat van elke expressie automatisch. In een script gebeurt dat niet, daar moet je print() gebruiken.	week02::setup
+Hoe sluit je de Python shell?	Met <code>quit()</code>.	week02::setup
+Waarom moet je in VS Code de juiste interpreter kiezen?	Omdat je meerdere Python-installaties kunt hebben. Kies je de verkeerde, dan draait je script met een andere Python dan waar je pakketten in staan.	week02::setup
+Wat is een boolean value?	Een waarde die True of False is. Let op de hoofdletter, python is hoofdlettergevoelig.	week02::booleans
+Wat is een boolean expressie?	Een uitdrukking die na evaluatie True of False oplevert, bijvoorbeeld <code>3 &lt; 4</code> of <code>naam == "Sake"</code>.	week02::booleans
+Noem de zes vergelijkingsoperatoren.	<code>==</code> gelijk, <code>!=</code> ongelijk, <code>&lt;</code> kleiner, <code>&gt;</code> groter, <code>&lt;=</code> kleiner of gelijk, <code>&gt;=</code> groter of gelijk. Ze leveren altijd een bool op.	week02::booleans
+Waarom werkt <code>sum([True, False, True])</code> en wat komt eruit?	2. True telt als 1 en False als 0, dus je kunt met booleans rekenen en zo waarheden tellen.	week02::booleans
+Wat is truthiness?	In een if telt ook een niet-bool mee. 0, een lege string en een lege lijst gelden als onwaar, al het andere als waar.	week02::booleans
+Wat is het resultaat van <code>"10" &lt; "9"</code> en waarom?	True. Strings worden teken voor teken alfabetisch vergeleken, niet als getal. Het teken 1 komt voor het teken 9.	week02::booleans
+Wat betekent een ketenvergelijking zoals <code>3 &lt;= n &lt;= 10</code>?	Precies wat er staat: n ligt tussen 3 en 10, grenzen meegerekend. Python staat dit toe, anders dan de meeste talen.	week02::booleans
+Wat doen <code>and</code>, <code>or</code> en <code>not</code>?	and: beide moeten waar zijn. or: minstens één moet waar zijn. not: draait waar en onwaar om.	week02::booleans
+Wat is de voorrangsvolgorde van de logische operatoren?	Eerst de vergelijkingen, dan <code>not</code>, dan <code>and</code>, dan <code>or</code>. Bij twijfel haakjes zetten.	week02::booleans
+Wat betekent short-circuit bij and en or?	Python stopt zodra de uitkomst vaststaat. Bij and stopt hij bij het eerste onware deel, bij or bij het eerste ware deel. De rest wordt niet uitgevoerd.	week02::booleans
+Wat doet de operator <code>in</code>?	Hij test of iets voorkomt in een string of lijst, bijvoorbeeld <code>"e" in tekst</code>. Levert een bool op.	week02::booleans
+Wat is de correcte syntax van een if-else?	<code>if conditie:</code> met dubbele punt, daaronder ingesprongen de body, en eventueel <code>else:</code> met zijn eigen ingesprongen body.	week02::condities
+Wat is het verschil tussen <code>elif</code> en een tweede losse <code>if</code>?	elif wordt alleen getest als alle takken erboven onwaar waren, en er draait er precies één. Losse ifs worden allemaal getest, dus er kunnen er meerdere draaien.	week02::condities
+Waarom is de volgorde van je elif-takken belangrijk?	Omdat de eerste tak die past wint en de rest wordt overgeslagen. Staat een bredere voorwaarde bovenaan, dan komt de specifiekere er nooit aan toe.	week02::condities
+Wat is een nested if en wanneer gebruik je die?	Een if binnen een if. Je gebruikt hem als de tweede vraag pas zin heeft wanneer de eerste waar is.	week02::condities
+Wat is een guard clause?	Eerst het foutgeval of de onmogelijke invoer afvangen en stoppen, en pas daarna de normale berekening doen. Houdt de hoofdlogica schoon.	week02::condities
+Wat doet <code>waarde = "ja" if x &gt; 0 else "nee"</code>?	Dat is een conditional expression. Anders dan een gewone if levert hij een <b>waarde</b> op die je kunt toekennen, in plaats van een pad te kiezen.	week02::condities
+Hoeveel testgevallen heb je minstens nodig bij een if-else-keten?	Minstens één invoer per tak, plus de waarden precies op de grens. Bij een bereik van 3 tot en met 10 test je 2, 3, 10 en 11.	week02::condities
+Wat gebeurt er als je vergeet in te springen na een dubbele punt?	Je krijgt een IndentationError. Python gebruikt inspringing als structuur, dus het blok is verplicht.	week02::condities
+Wat is een functie in Python?	Een stuk code onder een naam dat je kunt aanroepen. Het draait niet bij het definiëren maar pas bij de aanroep.	week02::functies
+Uit welke elementen bestaat een functiedefinitie?	Het woord <code>def</code>, een naam, haakjes met eventuele parameters, een dubbele punt, en daaronder de ingesprongen body.	week02::functies
+Hoe maak je een functie die niets doet?	Met <code>pass</code> als body. Python eist een body, en pass is de lege plaatshouder.	week02::functies
+Hoe roep je een functie aan?	Door de naam met haakjes te schrijven, met de argumenten ertussen. Zonder haakjes verwijs je alleen naar de functie zelf.	week02::functies
+Wat doet <code>return</code> precies?	Het stuurt een waarde terug naar de plek van de aanroep én stopt de functie meteen. Code na de return draait niet meer.	week02::functies
+Wat is het verschil tussen printen en returnen?	Printen zet iets op het scherm en is daarna weg. Returnen geeft je een waarde terug waarmee je verder kunt rekenen.	week02::functies
+Wat geeft een functie zonder return terug?	<code>None</code>.	week02::functies
+Wat is het verschil tussen een parameter en een argument?	De parameter is de naam in de def-regel, de lege plek. Het argument is de concrete waarde die je bij de aanroep meegeeft.	week02::functies
+Wat is scope, en wat gebeurt er met een variabele uit een functie?	Scope is waar een naam bestaat. Een variabele die je in een functie maakt is lokaal en bestaat alleen daar. Erbuiten krijg je een NameError.	week02::functies
+Waarom moet de def-regel eerder in het bestand staan dan de aanroep?	Python leest het bestand van boven naar beneden. Bij de aanroep moet de naam al bestaan, anders NameError.	week02::functies
+Mag een functie een andere functie aanroepen?	Ja. Zo knip je een groot probleem op in kleine stukken die je los kunt testen.	week02::functies
+Welke naamgeving schrijft PEP8 voor bij functies?	snake_case, met kleine letters en underscores, en een beschrijvende naam zoals <code>validate_int</code> in plaats van <code>vi</code> of <code>Func1</code>.	week02::functies
+Wat betekent <code>def validate_int(input_str: str) -&gt; bool:</code>?	Dat is een type hint: de functie verwacht een string en geeft een bool terug. Python dwingt het niet af, het is documentatie voor de lezer.	week02::functies
+Wat betekent de vuistregel één functie, één taak?	Een functie die valideert doet alleen valideren. Hij vraagt niet ook nog invoer en print niets. Zo blijft hij herbruikbaar en testbaar.	week02::functies
+Wat doet <code>.isdigit()</code> en wat is de valkuil?	Het geeft True als de string alleen cijfers bevat. De valkuil: <code>"-5".isdigit()</code> en <code>"3.5".isdigit()</code> zijn allebei False, want het minteken en de punt zijn geen cijfers.	week02::strings
+Wat doet <code>.isalpha()</code>?	Geeft True als de string alleen letters bevat. Handig om letters van cijfers te onderscheiden.	week02::strings
+Wat doet <code>.split(teken)</code> en wat krijg je terug?	Het hakt de string in stukken op elk voorkomen van dat teken en geeft een <b>lijst</b> van strings terug.	week02::strings
+Waarom is <code>.strip()</code> vaak nodig na een split?	Omdat de stukken nog spaties kunnen bevatten. Vergelijk je dan een stuk met een spatie ervoor met een tekst zonder spatie, dan klopt de vergelijking niet.	week02::strings
+Hoe maak je invoer ongevoelig voor hoofdletters?	Zet hem eerst helemaal om met <code>.lower()</code> of <code>.upper()</code> en vergelijk dan pas.	week02::strings
+Wat doen <code>ord()</code> en <code>chr()</code>?	ord zet een teken om naar zijn nummer in de tekentabel, chr doet het omgekeerde. <code>ord("a")</code> is 97 en <code>ord("A")</code> is 65.	week02::strings
+Waarom is ord() nuttig als je met een letter wilt rekenen?	Omdat letters op volgorde in de tekentabel staan. Het verschil tussen twee ord-waarden geeft je de positie in het alfabet.	week02::strings
+Hoe test je of een getal even is?	Met <code>getal % 2 == 0</code>. De rest bij deling door 2 is 0 voor even en 1 voor oneven.	week02::opdrachten
+Hoe test je of een getal deelbaar is door n?	Met <code>getal % n == 0</code>.	week02::opdrachten
+Wat is modulair rekenen en waar gebruik je het voor?	Rekenen met de rest van een deling. Je gebruikt het om te testen op deelbaarheid, om te wisselen tussen twee toestanden (pariteit) en om cijfers uit een getal te halen.	week02::opdrachten
+Wat is pariteit?	Of iets even of oneven is. Bij een schaakbord bepaalt de pariteit van rij plus kolom de kleur van het vakje.	week02::opdrachten
+Hoe controleer je of een waarde binnen een bereik valt?	Met een ketenvergelijking zoals <code>3 &lt;= n &lt;= 10</code>, en een else-tak met de foutmelding voor alles daarbuiten.	week02::opdrachten
+Hoe pak je gestructureerde invoer aan zoals <code>a=5, b=6, c=5</code>?	Eerst splitsen op de komma, dan per stuk splitsen op het isgelijkteken, spaties eraf halen en pas daarna omzetten naar een getal.	week02::opdrachten
+Waarom is tellen hoeveel zijden gelijk zijn slimmer dan alle combinaties uitschrijven?	Omdat de soort driehoek alleen afhangt van het <b>aantal</b> gelijke zijden, niet van welke twee. Eén telling vervangt zes vergelijkingen.	week02::opdrachten
+Wat is een piecewise (stuksgewijze) formule?	Een berekening waarbij een ander rekenvoorschrift geldt per bereik, zoals de eerste twee jaren anders tellen dan alle jaren daarna.	week02::opdrachten
+Waarom is de uitvoer bij hondenjaren soms 10.5 en soms 29?	Omdat 10.5 een float is en een berekening die op hele getallen uitkomt een int kan blijven. Het type van je tussenresultaten bepaalt hoe de uitvoer eruitziet.	week02::opdrachten
+Hoe controleer je een patroon zoals een kenteken?	Opdelen op het scheidingsteken en per deel controleren op lengte en op soort teken (cijfers of letters). Zo hak je één grote controle in kleine herhaalbare checks.	week02::opdrachten
+Waarom valideer je invoer vóór je gaat rekenen?	Omdat een verkeerde invoer anders midden in je berekening crasht. Eerst controleren, dan pas rekenen, geeft nette foutmeldingen in plaats van een traceback.	week02::opdrachten
+Welke drie gevallen moet je onderscheiden bij het vergelijken van twee prijzen?	Goedkoper, duurder, en precies gelijk. Dat derde geval vergeet je snel, terwijl de opdracht er meestal expliciet iets over zegt.	week02::opdrachten
+Wat doet een visualizer zoals Python Tutor?	Die voert je code stap voor stap uit en laat per regel zien wat er in elke variabele zit. Handig als je denkt te weten wat er gebeurt.	week02::debuggen
+Wat is een bureau-test of dry run?	Zelf met pen en papier per regel bijhouden wat elke variabele wordt, zonder de code te draaien.	week02::debuggen
+Wat is shadowing en waarom is het gevaarlijk?	Een eigen variabele dezelfde naam geven als een ingebouwde functie, zoals <code>sum</code>. Daarna is die functie onbruikbaar in de rest van je programma.	week02::debuggen
+Noem vier namen die je nooit als variabelenaam moet gebruiken.	<code>sum</code>, <code>list</code>, <code>str</code>, <code>input</code> (en ook <code>type</code> en <code>len</code>). Het zijn ingebouwde functies.	week02::debuggen
+Is een programma dat niet crasht daarmee goed?	Nee. Code kan probleemloos draaien en toch de verkeerde uitvoer geven, bijvoorbeeld als de plustekens en het totaal in de uitvoerregel ontbreken.	week02::debuggen
+Waarom is <code>Sum: 9</code> fout als er <code>3+1+4+1=9</code> gevraagd wordt?	Omdat de gevraagde uitvoer een letterlijk voorschrift is. CodeGrade vergelijkt teken voor teken, dus het juiste antwoord in een andere vorm is fout.	week02::debuggen
+Wat is je aanpak bij code die draait maar het verkeerde antwoord geeft?	Vergelijk regel voor regel wat je verwacht met wat er echt in de variabelen zit, met print of een visualizer. Zoek de eerste regel waar die twee uit elkaar lopen.	week02::debuggen
+Wat is een grondtal (base)?	Het aantal cijfers dat een talstelsel gebruikt. Decimaal 10 (0-9), binair 2 (0-1), octaal 8, hexadecimaal 16 (0-9 en A-F).	week02::dataformats
+Wat zijn de cijfers van het hexadecimale stelsel?	0 tot en met 9 en daarna A, B, C, D, E en F voor de waarden 10 tot en met 15.	week02::dataformats
+Wat is een bit, een byte en een nibble?	Een bit is één 0 of 1. Een byte is 8 bits en kan 0 tot en met 255 voorstellen. Een nibble is 4 bits en is precies één hex-cijfer.	week02::dataformats
+Waarom is hexadecimaal zo handig bij binaire data?	Omdat 4 bits exact één hex-cijfer zijn. Je kunt binair dus per groepje van vier direct omzetten zonder via decimaal te rekenen.	week02::dataformats
+Waarom kun je bij decimaal niet per groepje bits omrekenen?	Omdat 10 geen macht van 2 is. Bij 16 (2 tot de vierde) en 8 (2 tot de derde) valt de groepering precies samen met de bits, bij 10 niet.	week02::dataformats
+Wat geven <code>bin(10)</code> en <code>hex(255)</code> terug?	De strings <code>"0b1010"</code> en <code>"0xff"</code>. Let op: het resultaat is tekst met voorvoegsel, geen getal.	week02::dataformats
+Hoe lees je een string in een ander grondtal in?	Met <code>int(tekst, grondtal)</code>, bijvoorbeeld <code>int("1010", 2)</code> is 10 en <code>int("ff", 16)</code> is 255.	week02::dataformats
+Waarom crasht <code>int("ff")</code> maar werkt <code>int("ff", 16)</code>?	Zonder grondtal gaat int uit van decimaal, en ff bestaat daar niet. Je krijgt een ValueError. Met grondtal 16 is het wel een geldig getal.	week02::dataformats
+Wat betekenen de voorvoegsels 0b, 0o en 0x?	Ze schrijven een getal direct in binair, octaal of hexadecimaal. <code>0x1F</code> is gewoon het getal 31, geen string en geen conversie.	week02::dataformats
+Wat doet <code>f"{255:08b}"</code>?	Print 255 als binair getal aangevuld met nullen tot precies 8 tekens: 11111111.	week02::dataformats
+Wat is het verschil tussen <code>f"{10:x}"</code>, <code>f"{10:X}"</code> en <code>f"{10:#x}"</code>?	Kleine letters (a), hoofdletters (A) en met het voorvoegsel 0x erbij.	week02::dataformats
+Wat is endianness?	De volgorde waarin de bytes van een getal worden opgeslagen. Big-endian zet het zwaarste byte eerst, little-endian als laatste. Het getal zelf verandert niet, alleen de opslagvolgorde.	week02::dataformats
+Waarom crasht <code>(256).to_bytes(1, "big")</code>?	Omdat 256 niet in één byte past. Een byte gaat maar tot en met 255.	week02::dataformats
+Waarom is <code>0.1 + 0.2 == 0.3</code> False?	0.1 en 0.2 zijn binair niet exact te schrijven, dus de opslag is een benadering. De optelling komt daardoor minimaal naast 0.3 uit.	week02::dataformats
+Waarom gaat 0.1 binair mis en 0.5 niet?	0.5 is 2 tot de macht min 1 en past dus exact in een binaire breuk. 0.1 is dat niet en wordt een oneindig herhalend binair getal dat moet worden afgekapt.	week02::dataformats
+Waarom gebruik je <code>Decimal</code> voor geld?	Omdat Decimal exact in tien-tallen rekent en de afrondfouten van float vermijdt. Belangrijk zodra centen moeten kloppen.	week02::dataformats
+Waarom schrijf je <code>Decimal("0.1")</code> met quotes?	Zonder quotes maak je eerst een float, met de afwijking er al in, en geef je die fout door aan Decimal. Met quotes lees je de exacte waarde in.	week02::dataformats
+Wat eist de cursushandleiding als je AI gebruikt voor onderzoek of een supporting topic?	Vermelden in je dossier hoe je AI hebt ingezet, verwijzen volgens APA7, de teksten zelf herschrijven, en de chatlogs bewaren en op verzoek tonen.	week02::werkwijze
+Wat is een comment en hoe schrijf je er een?	Tekst achter een <code>#</code> die Python negeert. Bedoeld om uit te leggen <b>waarom</b> je iets doet, niet om te herhalen wat er al staat.	week02::werkwijze
+Waarom zet je een comment boven een ingewikkelde if?	Omdat de code laat zien wát er gebeurt, maar niet waarom die voorwaarde zo gekozen is. Dat is precies wat een lezer (en de docent) mist.	week02::werkwijze
