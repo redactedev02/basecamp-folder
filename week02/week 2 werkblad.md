@@ -69,6 +69,11 @@ else:
 
 #### Oefening 1. Create a variable with the value `True`. Print it. Change the value to `False`. Print it.
 
+```python
+leeftijd = int(input("Wat is jouw leeftijd?"))
+is_volwassen = leeftijd >= 18
+print(is_volwassen)
+```
 
 #### Oefening 2. Create a variable
 
@@ -76,16 +81,40 @@ else:
 - named ```b``` with the value ```False```. Use print to check the output of ```print(a == b)```.
 - Do the same for the other comparison operators, ```!=```, ```<```, ```>```, ```<=```, ```>=```.
 
+Wat mij opvalt aan deze oefening is dat, True of False, dus eigenlijk niet heel anders is dan 1 of 0. Toen ik checkte; sum([True, False, True]), werkte dat ook.
 
 #### Oefening 3. Repeat the second exercise using an *if-statement*. Print `yes` or `no`, for true false.
 
 - Write a comment above the *if-statement* explaining with it does.
-
+```python
+a = input("True/False")
+b = input("True/False")
+gelijk = "yes" if a == b else "no"
+print("Gelijk:")
+print(gelijk)
+```
 
 #### Oefening 4. Implement a program in which the user is asked for input. Save the input of the user in a variable. Print `yes` if the input contains the character `e`, `no` if not.
 
 
 #### Oefening 5. Think of an useful situation where you need to check something with a if-statement within another if-statement (nested if-statements). Code it and write a comment to explain why it needs a nested if.
+Wanneer je de leeftijd alleen van een man/vrouw moet bepalen. Er zijn dan 2 dingen die wel of niet kunnen voldoen, leeftijd en gender.
+
+```python
+geslacht = input("Geslacht (man/vrouw): ")
+leeftijd = int(input("Leeftijd: "))
+
+# Waarom genest: de tweede vraag heeft alleen zin als de eerste klopt.
+# Ben je geen vrouw, dan hoeft de leeftijd niet eens gecontroleerd te worden.
+# De binnenste if draait dus alleen als de buitenste waar is.
+if geslacht == "vrouw":
+    if leeftijd >= 18:
+        print("Vrouw en meerderjarig")
+    else:
+        print("Vrouw, maar nog minderjarig")
+else:
+    print("Geen vrouw, leeftijd niet gecontroleerd")
+```
 
 
 #### Oefening 6. Finish all the exercises listed in **BRef-01-Chapter 04: Things to Do**.
@@ -189,3 +218,38 @@ else:
     text = text + numstr[i]
  print(text)
  ```
+
+### Code analyses correctie
+
+#### Solution 1
+```python
+text = input("Input a four digit number: ")
+
+if not text.isdigit() or len(text) != 4:
+    print("Please enter exactly four digits.")
+else:
+    number = int(text)
+    thousands = number // 1000
+    hundreds  = (number - thousands * 1000) // 100
+    tens      = (number - thousands * 1000 - hundreds * 100) // 10
+    units     = number - thousands * 1000 - hundreds * 100 - tens * 10
+    total     = thousands + hundreds + tens + units
+    print(f"{thousands}+{hundreds}+{tens}+{units}={total}")
+```
+
+#### Solution 2
+```python
+numstr = input("Enter a four digit number: ")
+
+if not numstr.isdigit() or len(numstr) != 4:
+    print("Please enter exactly four digits.")
+else:
+    total = 0
+    text = ""
+    for i in range(len(numstr)):
+        total += int(numstr[i])
+        if i > 0:
+            text += "+"
+        text += numstr[i]
+    print(text + "=" + str(total))
+```
