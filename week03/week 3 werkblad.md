@@ -11,21 +11,23 @@
 *Using **BRef-01: Chapter 05** and **BRef-02: Chapter 07** experiment and answer the following questions*
 
 #### 1. What is string data type?
-
+Een type data voor tekst, dus letters cijfers en tekens.
 
 #### 2. Which Python built-in function can be used to convert a data type to string? Try some examples in Python shell.
-
+str()
 
 #### 3. In Python (and some other programming languages), special characters can be included in a string. How one can specify these special characters in a Python program? List some of these characters and try the examples in Python shell.
-
+Door escape "/" te gebruiken kun je erna een speciaal teken neerzetten zonder dat hij de syntax verpest.
 
 #### 4. How one can concatenate multiple strings? Make one string with your: First name, Last name, student number and group number.
-
+f-string of + tekens
 
 #### 5. What would be the result of multiplying a number with a string? Try three examples. What if the number is zero?
-
+Herhaalt het gewoon, rekent niet
 
 #### 6. How can you extract specific character from a given string? How can you specify the first character? Last character? How can you get a slice if a string? Try with several examples in Python shell.
+first character: [0]
+last character: [len(number-1)]
 
 
 #### 7. What are the functionality of functions: *len()*, *split()*, *join()*, *replace()*. Try two examples for each function in Python shell.
@@ -226,6 +228,3 @@ print(count)
  for c in sentence:
  	print(c)
 ```
-
-
-
