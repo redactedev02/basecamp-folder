@@ -1,9 +1,0 @@
-#separator:Tab
-#html:true
-#notetype:Basic
-#deck:Basecamp::Week 05
-#columns:Front	Back	Tags
-#tags column:3
-Hoe zet je een element achter aan een lijst?	Met <code>.append(x)</code>. Lijsten zijn mutable, dus de lijst zelf verandert — er komt geen nieuwe lijst terug.	week05::lijsten
-Wat is de valkuil bij <code>.sort()</code>?	Het sorteert de lijst zelf en geeft <b>niets</b> terug. <code>x = lijst.sort()</code> levert dus None op.	week05::lijsten
-Wat geeft <code>random.randint(0, 9)</code>, en wat heb je ervoor nodig?	Een willekeurig geheel getal van 0 tot en met 9 — beide grenzen doen mee. Je moet eerst <code>import random</code> doen.	week05::modules

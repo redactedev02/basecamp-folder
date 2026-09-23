@@ -4,54 +4,94 @@
 #deck:Basecamp::Week 01
 #columns:Front	Back	Tags
 #tags column:3
-Wat is een lineair programma?	Een programma zonder keuzes (if) en zonder herhaling (for/while): elke regel draait, altijd in de volgorde invoer → verwerking → uitvoer.	week01::basis
-Wat is het verschil tussen syntax en semantiek?	Syntax is de grammatica: fout daarin en het programma start niet eens. Semantiek is de betekenis: fout daarin en het draait wél, maar geeft het verkeerde antwoord.	week01::basis
-Wat is het verschil tussen een statement en een expressie?	Een statement <b>doet</b> iets, zoals <code>x = 5</code>. Een expressie <b>levert een waarde op</b>, zoals <code>2 + 3</code> of <code>input(...)</code>.	week01::basis
-Waarom krijg je een SyntaxError voordat er één regel is uitgevoerd?	Python vertaalt eerst het hele bestand naar bytecode en controleert daarbij de grammatica. Pas daarna voert de PVM die bytecode uit.	week01::basis
-Waarin verschilt een docstring van een comment?	Een comment achter <code>#</code> verdwijnt bij het vertalen. Een docstring blijft in het programma bestaan en is opvraagbaar.	week01::basis
-Welke drie blokken heeft elk programma uit template.py?	Inputs, Processing, Outputs — eerst in gewone taal opschrijven, dan pas code. Processing schrijf je als laatste.	week01::werkwijze
-Waarom schrijf je zo veel mogelijk één ding per regel?	Dan zie je precies welke stap fout gaat. <code>digit1 = int(user_input[0])</code> debug je makkelijker dan één lange expressie.	week01::werkwijze
-Wat doet het <code>=</code> teken precies?	Het is geen gelijkteken maar een opdracht: Python rekent eerst de <b>rechterkant</b> uit en hangt het resultaat daarna aan de naam links.	week01::variabelen
+Wat is een lineair programma?	Een programma dat van boven naar beneden loopt zonder keuzes (if) en zonder herhaling (for/while). Altijd de lijn invoer → verwerking → uitvoer.	week01::basis
+Wat is het verschil tussen syntax en semantiek?	Syntax = de grammaticaregels, fout daarin en het programma start niet eens. Semantiek = wat de regel betekent als hij draait, fout daarin en het programma draait wél maar geeft het verkeerde antwoord.	week01::basis
+Wat is het verschil tussen een statement en een expressie?	Een statement <b>doet</b> iets, zoals <code>x = 5</code> of <code>print(...)</code>. Een expressie <b>levert een waarde op</b>, zoals <code>2 + 3 * 4</code> of <code>input(...)</code>.	week01::basis
+Welke route legt je code af voordat hij draait?	Broncode → bytecode → Python Virtual Machine (PVM). Python vertaalt eerst het hele bestand, daarna voert de PVM de bytecode uit.	week01::basis
+Waarom krijg je een SyntaxError voordat er ook maar één regel is uitgevoerd?	Omdat Python eerst het hele bestand naar bytecode vertaalt. Bij het vertalen wordt de grammatica al gecontroleerd, dus er draait nog niks.	week01::basis
+Wat doet een <code>#</code> in Python?	Alles achter de # wordt genegeerd door Python. Het is commentaar, bedoeld voor jezelf en de lezer.	week01::basis
+Wat is een docstring en waarin verschilt hij van een comment?	Een tekstblok tussen driedubbele quotes bovenin een bestand of functie dat beschrijft wat het doet. Anders dan een comment blijft hij in het programma bestaan en is hij opvraagbaar.	week01::basis
+Welke drie blokken heeft elk programma uit template.py?	Inputs, Processing, Outputs. Eerst in gewone taal opschrijven, dan pas code. Processing schrijf je als laatste.	week01::werkwijze
+Waarom schrijf je zo veel mogelijk één ding per regel?	Omdat je dan precies kunt zien welke stap fout gaat. <code>digit1 = int(user_input[0])</code> is makkelijker te debuggen dan alles in één lange expressie.	week01::werkwijze
+Wat doet het <code>=</code> teken precies?	Het is geen gelijkteken maar een opdracht. Python rekent eerst de <b>rechterkant</b> uit en hangt het resultaat daarna aan de naam links.	week01::variabelen
 Wat is het verschil tussen <code>=</code> en <code>==</code>?	<code>=</code> kent een waarde toe aan een naam. <code>==</code> vraagt óf twee waarden gelijk zijn en levert True of False op.	week01::variabelen
-<code>a = 16</code> / <code>b = 12</code> / <code>b = a</code> / <code>a = 22</code> — wat printen a en b?	22 en 16. Bij <code>b = a</code> kreeg b de wáárde 16, geen verwijzing naar a.	week01::variabelen
-Waarom zijn <code>2naam</code>, <code>mijn-naam</code> en <code>class</code> ongeldige variabelenamen?	Een naam mag niet met een cijfer beginnen, het streepje is een minteken, en class is een keyword. <code>naam2</code> mag wél.	week01::variabelen
-Wat is het verschil tussen <code>Naam</code> en <code>naam</code>?	Twee verschillende variabelen — namen zijn hoofdlettergevoelig. Schrijf ze in snake_case: kleine letters met underscores.	week01::variabelen
-Hoe verwissel je de waarden van a en b?	Met een hulpvariabele: <code>t = a</code>, <code>a = b</code>, <code>b = t</code>. Of de Python-manier: <code>a, b = b, a</code>.	week01::variabelen
-Wat betekent het dat alles in Python een object is?	Elke waarde draagt niet alleen data bij zich, maar ook zijn type en de methodes die je erop mag gebruiken.	week01::types
+Waarom crasht <code>totaal = prijs * 2</code> als prijs pas op de regel erna wordt gezet?	NameError. De rechterkant wordt eerst uitgerekend, en op dat moment bestaat prijs nog niet.	week01::variabelen
+<code>a = 16</code> / <code>b = 12</code> / <code>b = a</code> / <code>a = 22</code>. Wat printen a en b?	22 en 16. Bij <code>b = a</code> krijgt b de waarde 16, en dat verandert niet meer als a daarna 22 wordt.	week01::variabelen
+Welke namen mogen niet in Python en waarom?	<code>2naam</code> (mag niet met een cijfer beginnen), <code>mijn-naam</code> (het streepje is een minteken) en <code>class</code> (keyword). <code>naam2</code> mag wél.	week01::variabelen
+Welke schrijfwijze gebruik je voor variabelenamen?	snake_case, dus kleine letters met underscores. Namen zijn hoofdlettergevoelig, dus <code>Naam</code> en <code>naam</code> zijn twee verschillende variabelen.	week01::variabelen
+Wat betekent <code>n += 5</code>?	Hetzelfde als <code>n = n + 5</code>. Ook <code>-=</code> bestaat.	week01::variabelen
+Hoe verwissel je de waarden van a en b met een hulpvariabele?	<code>t = a</code>, dan <code>a = b</code>, dan <code>b = t</code>. Je moet a tijdelijk parkeren, anders overschrijf je hem voordat je hem kunt gebruiken.	week01::variabelen
+Hoe verwissel je a en b zonder hulpvariabele?	Met rekenen (a = a + b, enzovoort) of met de Python-manier <code>a, b = b, a</code>.	week01::variabelen
+Wat is het verschil tussen een waarde en een variabele?	De waarde is de data zelf (42, hallo, 3.14). De variabele is de naam die naar die waarde verwijst.	week01::variabelen
+Wat betekent het dat alles in Python een object is?	Elke waarde draagt niet alleen data bij zich maar ook zijn type en wat je ermee kunt doen (zijn methodes).	week01::types
+Noem de vier primitieve types van week 1 met een voorbeeld.	<code>int</code> = 7, <code>float</code> = 5.5, <code>str</code> = hallo, <code>bool</code> = True.	week01::types
 Wat is het verschil tussen int en float?	int is een geheel getal en rekent exact. float is een kommagetal en rekent bij benadering.	week01::types
-Waarom kun je <code>naam[0] = "X"</code> niet doen?	Strings zijn immutable: je kunt ze niet ter plekke wijzigen. Elke bewerking levert een <b>nieuwe</b> string op.	week01::types
-Hoe vraag je op welk type iets is?	Met <code>type(x)</code> — je eerste zet zodra je een TypeError krijgt.	week01::types
+Waarom is <code>0.1 + 0.2</code> niet precies 0.3?	Floats worden binair opgeslagen als benadering. Voor geld en exacte vergelijkingen is dat een valkuil.	week01::types
+Wat betekent mutability, en welke week-1 types zijn immutable?	Of je een waarde ná het maken nog kunt wijzigen. <code>str</code>, <code>int</code> en <code>float</code> zijn immutable.	week01::types
+Waarom kun je <code>naam[0] = "X"</code> niet doen?	Strings zijn immutable. Je kunt een string niet ter plekke aanpassen, je maakt altijd een nieuwe.	week01::types
+Hoe vraag je op welk type iets is?	Met <code>type(x)</code>. Dat is je belangrijkste debug-gereedschap als je een TypeError krijgt.	week01::types
 Waarom is <code>5 == 5.0</code> True maar <code>"5" == 5</code> False?	5 en 5.0 zijn allebei getallen met dezelfde waarde. De string "5" is tekst en dus nooit gelijk aan een getal.	week01::types
-Wanneer sla je een getal op als tekst?	Als je er niet mee rékent. Een telefoonnummer verliest anders de voorloopnul van 06, en een huisnummer als 8a past niet in een getal.	week01::types
+Waarom sla je een telefoonnummer op als tekst?	Je rekent er nooit mee, en als getal verdwijnt de voorloopnul van 06.	week01::types
+Waarom sla je een huisnummer op als tekst?	Omdat toevoegingen zoals 8a of 8-bis niet in een getal passen.	week01::types
+Wat is de vuistregel om te kiezen tussen getal en tekst?	Reken je ermee (optellen, delen, vermenigvuldigen)? Dan een getal. Zo niet, dan tekst.	week01::types
+Wat is <code>int(True) + int(True)</code>?	2. True telt als 1 en False als 0.	week01::types
 Wat geeft <code>int(7.9)</code>?	7. int() kapt de decimalen af, het rondt niet af.	week01::conversie
-Waarom crasht <code>int("3.5")</code> maar werkt <code>float("3.5")</code> wel?	ValueError: de inhoud ziet er niet uit als een gehéél getal. Als kommagetal is diezelfde tekst wél geldig.	week01::conversie
+Waarom crasht <code>int("3.5")</code>?	ValueError. Het type klopt (het is tekst), maar de inhoud ziet er niet uit als een geheel getal.	week01::conversie
+Waarom mag <code>float("3.5")</code> wél?	Omdat de tekst er wél uitziet als een kommagetal. float() accepteert die vorm, int() niet.	week01::conversie
 Wat geven <code>round(7.5)</code> en <code>round(8.5)</code>?	Allebei 8. Python rondt halve getallen af naar het dichtstbijzijnde <b>even</b> getal.	week01::conversie
 Wat geven <code>bool(0)</code>, <code>bool("")</code>, <code>bool("0")</code> en <code>bool(-1)</code>?	False, False, True, True. Nul en leeg zijn onwaar, een string met inhoud is altijd waar.	week01::conversie
-Wanneer heb je <code>str()</code> nodig?	Als je een getal aan tekst plakt met +. Bij print met komma's of in een f-string hoeft het niet, die zetten zelf om.	week01::conversie
+Wanneer heb je <code>str()</code> nodig?	Als je een getal aan tekst wilt plakken met +. Bij print met komma's of bij een f-string hoeft het niet, die zetten zelf om.	week01::conversie
+Wat doet <code>int("1010101", 2)</code>?	Leest de tekst als een binair getal en geeft 85. Hetzelfde getal schrijf je direct als <code>0b1010101</code>.	week01::conversie
 Wat is bijzonder aan de deling <code>/</code>?	Het resultaat is <b>altijd</b> een float, ook als het precies uitkomt. <code>4 / 2</code> geeft 2.0.	week01::rekenen
-Hoe pak je het laatste cijfer van 1234, en hoe hak je het eraf?	<code>1234 % 10</code> geeft 4 (de rest). <code>1234 // 10</code> geeft 123 (delen en de rest weggooien).	week01::rekenen
-Wat geven <code>7 / 2</code>, <code>7 // 2</code> en <code>7 % 2</code>?	3.5, 3 en 1.	week01::rekenen
+Wat doet <code>//</code>?	Floor division. Het deelt en gooit de rest weg, dus <code>1234 // 10</code> is 123. Handig om het laatste cijfer eraf te hakken.	week01::rekenen
+Wat doet <code>%</code>?	Modulo, de rest van een deling. <code>1234 % 10</code> is 4, dus het geeft je het laatste cijfer.	week01::rekenen
+Wat doet <code>**</code>?	Machtsverheffen. <code>2 ** 10</code> is 1024.	week01::rekenen
 Wat is de volgorde van bewerkingen in Python?	Haakjes, dan <code>**</code>, dan <code>* / // %</code>, dan <code>+ -</code>. Gelijke rang gaat van links naar rechts.	week01::rekenen
-Waarom is <code>2**3**2</code> gelijk aan 512 en niet 64?	Omdat <code>**</code> als enige van rechts naar links wordt uitgevoerd: eerst 3**2 = 9, daarna 2**9.	week01::rekenen
-Wat geven <code>-7 // 2</code> en <code>-7 % 2</code>?	-4 en 1. Floor division rondt naar beneden, niet naar nul toe.	week01::rekenen
-Welke operatoren crashen op een deler van 0?	<code>/</code>, <code>//</code> en <code>%</code> — alle drie met een ZeroDivisionError.	week01::rekenen
+Waarom is <code>2**3**2</code> gelijk aan 512 en niet 64?	Omdat <code>**</code> als enige van rechts naar links wordt uitgevoerd. Dus eerst 3**2 = 9, daarna 2**9.	week01::rekenen
+Hoeveel is <code>10 - 4 - 3</code>?	3. Operatoren van gelijke rang gaan van links naar rechts.	week01::rekenen
+Wat geven <code>-7 // 2</code> en <code>-7 % 2</code>?	-4 en 1. Floor division rondt naar beneden (weg van nul), niet naar nul toe.	week01::rekenen
+Hoe pak je het middelste cijfer van 153?	<code>153 // 10 % 10</code> geeft 5. Eerst opschuiven met //, daarna eruit pakken met %.	week01::rekenen
+Waarvoor gebruik je // en % samen?	Om losse cijfers uit een getal te peuteren. // schuift op naar links, % pakt het rechtse cijfer eruit.	week01::rekenen
+Crasht <code>5 % 0</code> ook?	Ja, ZeroDivisionError. Delen door nul mag niet bij <code>/</code>, <code>//</code> en <code>%</code>.	week01::rekenen
+Wat geven <code>7 / 2</code>, <code>7 // 2</code> en <code>7 % 2</code>?	3.5, 3 en 1.	week01::rekenen
 Waarom is het 5e teken van een string <code>s[4]</code>?	Omdat tellen bij 0 begint. Dat heet offset en het is de meest gemaakte fout van week 1.	week01::strings
 Wat doet <code>s[-1]</code>?	Geeft het laatste teken. Negatieve indexen tellen vanaf achteren.	week01::strings
-Hoe werkt <code>s[start:eind]</code>?	Het snijdt een substring: de start telt mee, het eind <b>niet</b>. <code>s[:4]</code> is alles ervóór, <code>s[4:]</code> alles vanaf 4.	week01::strings
+Hoe werkt <code>s[start:eind]</code>?	Het geeft een substring. De start telt mee, het eind <b>niet</b>. <code>s[4:]</code> is alles vanaf 4 en <code>s[:4]</code> is alles ervóór.	week01::strings
+Hoe haal je de letters uit de postcode 3011AB?	Met <code>postcode[4:]</code> of <code>postcode[-2:]</code>. De cijfers haal je met <code>postcode[:4]</code>.	week01::strings
+Wat geeft <code>s[2:2]</code>?	Een lege string, want de start telt mee maar het eind niet en ze liggen op dezelfde plek.	week01::strings
 Waarom werkt <code>"Rotterdam"[9:]</code> wel en <code>"Rotterdam"[9]</code> niet?	Snijden buiten de rand mag en geeft een lege string. Eén teken pakken buiten de rand geeft een IndexError.	week01::strings
-Wat is het verschil tussen <code>"3" * 4</code> en <code>3 * 4</code>?	"3333" en 12. Het type bepaalt wat de ster betekent: bij een string is het herhalen.	week01::strings
-Wat gebeurt er bij <code>"Totaal: " + 5</code>?	TypeError. Plakken met + kan alleen tussen strings. Gebruik komma's in print, een f-string of str(5).	week01::strings
-Wat hebben <code>.upper()</code>, <code>.lower()</code> en <code>.replace()</code> gemeen?	Ze geven alle drie een <b>nieuwe</b> string terug. Het origineel verandert niet.	week01::strings
+Wat is het verschil tussen <code>"3" * 4</code> en <code>3 * 4</code>?	"3333" en 12. Het type bepaalt wat de ster betekent, bij een string is het herhalen.	week01::strings
+Kun je <code>"Totaal: " + 5</code> doen?	Nee, TypeError. Plakken met + werkt alleen tussen strings. Gebruik komma's in print, een f-string of str(5).	week01::strings
+Wat doet <code>len(s)</code>?	Geeft het aantal tekens van een string (of het aantal elementen van een lijst).	week01::strings
+Wat doen <code>.upper()</code>, <code>.lower()</code> en <code>.replace(oud, nieuw)</code>?	Hoofdletters maken, kleine letters maken en alle voorkomens vervangen. Alle drie geven een <b>nieuwe</b> string terug, het origineel blijft.	week01::strings
+Wat doen <code>.split()</code> en <code>"".join(...)</code>?	split hakt een zin in losse woorden, join plakt losse stukken weer aan elkaar tot één string.	week01::strings
 Wat is het verschil tussen een functie en een methode?	Een functie staat vóór de haakjes, zoals <code>len(x)</code>. Een methode hangt achter de waarde, zoals <code>x.upper()</code>, en hoort bij dat type.	week01::strings
-Je snijdt het getal uit de invoer <code>Laps: 7</code> — waarom ben je er dan nog niet?	Slicen levert altijd tekst op. Voor je ermee kunt rekenen moet het resultaat nog door int().	week01::strings
-Welk type geeft <code>input()</code> terug?	Altijd <code>str</code>, ook als je cijfers intikt. Python kan niet raden wat je bedoelt, dus jij beslist met int() of float().	week01::io
+Hoe haal je het getal uit de invoer <code>Laps: 7</code>?	Eerst het stuk eruit snijden met slicing, daarna omzetten met int(). Slicen levert namelijk nog steeds tekst op.	week01::strings
+Welk type geeft <code>input()</code> terug?	Altijd <code>str</code>, ook als je cijfers intikt. Python kan niet raden of je 8 als getal of als tekst bedoelt, dus jij beslist met int() of float().	week01::io
 Wat geeft <code>print()</code> zelf terug?	<code>None</code>. Daarom crasht <code>float(print(...))</code>, want dat is in feite float(None).	week01::io
-Wat doen de komma's in <code>print(a, b, c)</code>?	Print zet er zelf een spatie tussen en zet alles om naar tekst. Vandaar dat komma's werken waar + crasht.	week01::io
-Wat is een f-string?	<code>f"Totaal: {gewicht} gram"</code> — de f zegt tegen Python: vul de waarde in de accolades in. Je hoeft niets om te zetten.	week01::io
-Wat doen <code>f"{x:.3f}"</code> en <code>f"{x:8.1f}"</code>?	Precies 3 decimalen; en 1 decimaal in een vak van 8 tekens breed, om kolommen uit te lijnen.	week01::io
-Hoe streng kijkt CodeGrade naar je uitvoer?	Teken voor teken. Goed gerekend maar één spatie of hoofdletter anders is fout: de opdrachttekst is een letterlijk voorschrift.	week01::io
-Wat betekent een NameError?	De naam bestaat niet. Meestal een typefout, of je gebruikt een variabele vóór de toekenning.	week01::fouten
-Wat is het verschil tussen een TypeError en een ValueError?	TypeError: het type klopt niet, zoals <code>"a" + 5</code>. ValueError: het type klopt wél maar de inhoud kan niet, zoals <code>int("twintig")</code>.	week01::fouten
-Welke fouten ziet Python vóór het draaien, en welke pas tijdens?	SyntaxError en IndentationError komen bij het vertalen. NameError, TypeError, ValueError, IndexError en ZeroDivisionError pas als die regel aan de beurt is.	week01::fouten
+Wat gebeurt er met komma's in <code>print(a, b, c)</code>?	Print zet er zelf een spatie tussen en zet alles automatisch om naar tekst. Vandaar dat komma's werken waar + crasht.	week01::io
+Wat is een f-string en wat is het voordeel?	<code>f"Totaal: {gewicht} gram"</code>. De f zegt tegen Python: vul de waarde in de accolades in. Je bepaalt de spaties zelf en hoeft niets om te zetten.	week01::io
+Wat doet <code>f"{x:.3f}"</code>?	Print x met precies 3 decimalen.	week01::io
+Wat doet <code>f"{x:8.1f}"</code>?	Print x in een vak van 8 tekens breed met 1 decimaal. Handig om kolommen uit te lijnen.	week01::io
+Waarvoor gebruik je <code>repr(x)</code>?	Het laat de waarde zien mét quotes en spaties, zodat je kunt zien of een string echt is wat je denkt.	week01::io
+Hoe streng kijkt CodeGrade naar je uitvoer?	Teken voor teken. Goed gerekend maar één spatie, komma of hoofdletter anders is fout. De opdrachttekst is een letterlijk voorschrift.	week01::io
+Wat doet <code>def naam(parameters):</code>?	Het definieert een functie, dus een stuk code onder een naam. De code draait pas als je de functie aanroept.	week01::functies
+Wat doet <code>return</code>?	Stuurt een waarde terug naar de plek waar de functie is aangeroepen.	week01::functies
+Wat geeft een functie zonder return terug?	<code>None</code>.	week01::functies
+Wat is het verschil tussen een parameter en een argument?	De parameter is de lege plek in de def-regel. Het argument is de waarde die je bij de aanroep meegeeft.	week01::functies
+Wat gebeurt er als je het resultaat van een functie niet opvangt?	Dan is het weg. Je moet het in een variabele zetten, zoals <code>months = calc_months(nyears)</code>.	week01::functies
+Waarom is inspringen in Python belangrijk?	Python gebruikt witruimte als structuur. Wat bij een functie (of if of lus) hoort staat ingesprongen, en verkeerd inspringen is een echte fout.	week01::functies
+Wat doen <code>if</code> en <code>else</code>?	Ze kiezen tussen twee routes op basis van True of False.	week01::lezen
+Wat doet <code>while conditie:</code>?	Het herhaalt het blok zolang de conditie waar is.	week01::lezen
+Wat doet <code>for _ in range(0, n):</code>?	Het herhaalt n keer. range telt vanaf 0 tot net niet n, en de underscore is de naam voor een lusvariabele die je niet gebruikt.	week01::lezen
+Wat is een lijst en hoe zet je er iets bij?	Een verzameling waarden in volgorde, geschreven met vierkante haken. Met <code>.append(x)</code> zet je er een element achteraan bij. Lijsten zijn mutable.	week01::lezen
+Wat is de valkuil bij <code>.sort()</code>?	Het sorteert de lijst zelf en geeft <b>niets</b> terug. <code>x = lijst.sort()</code> levert dus None op.	week01::lezen
+Wat doet <code>random.randint(0, 9)</code> en wat heb je ervoor nodig?	Het geeft een willekeurig geheel getal van 0 tot en met 9, dus beide grenzen doen mee. Je moet eerst <code>import random</code> doen.	week01::lezen
+Wat betekent een NameError?	De naam bestaat niet. Meestal een typefout (Len in plaats van len) of je gebruikt een variabele vóór de toekenning.	week01::fouten
+Wat betekent <code>TypeError: can only concatenate str (not "int") to str</code>?	Je probeert een getal aan tekst te plakken met +. Gebruik komma's in print, een f-string of str().	week01::fouten
+Wat betekent een ValueError bij <code>int("twintig")</code>?	Het type klopt wel (het is een string) maar de inhoud kan niet als getal gelezen worden.	week01::fouten
+Wat betekent <code>IndexError: string index out of range</code>?	Je vraagt een teken dat niet bestaat, bijvoorbeeld s[3] bij een string van 3 tekens (die heeft 0, 1 en 2).	week01::fouten
+Wat betekent een IndentationError?	Je hebt verkeerd ingesprongen, bijvoorbeeld een spatie te veel voor een regel die niet in een blok hoort.	week01::fouten
+Welke fouten ziet Python vóór het draaien en welke pas tijdens?	SyntaxError en IndentationError komen bij het vertalen, dus vóór het draaien. NameError, TypeError, ValueError, IndexError en ZeroDivisionError komen pas als die regel aan de beurt is.	week01::fouten
 Hoe lees je een traceback?	Van onderaf. De onderste regel zegt <b>wat</b> er mis is, de regel erboven zegt <b>waar</b>.	week01::fouten
-Wat is je eerste stap bij een TypeError?	Print het type van de waarden die je gebruikt met <code>type(x)</code>. Dan zie je welke aanname van jou niet klopt.	week01::fouten
+Wat is je eerste stap als je een TypeError krijgt?	Print het type van de waarden die je gebruikt met <code>type(x)</code>. Dan zie je welke aanname van jou niet klopt.	week01::fouten
