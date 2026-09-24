@@ -4,8 +4,9 @@
 |---|---|
 | **Code** | `A4W15P3` |
 | **Soort** | Problem |
-| **Week** | 15 |
-| **Deadline** | eind van week 15 (vrijdag 23:59) |
+| **Week** | 15 — ma 4 jan t/m vr 8 jan 2027 |
+| **Af op** | do 7 jan 2027, eind van de dag |
+| **Inleveren** | vr 8 jan 2027 23:59 in CodeGrade |
 | **CodeGrade** | https://app.codegra.de/courses/21582/assignments |
 
 ---
@@ -15,7 +16,7 @@
 > De opleiding zet de omschrijving pas in CodeGrade als week 15 wordt
 > vrijgegeven. Plak hem hier zodra hij er staat, dan heb je hem offline.
 
-Ondersteunend bewijs. Inleveren aan het eind van de week.
+Ondersteunend bewijs. Uiterlijk **vr 8 jan 2027 23:59** in CodeGrade.
 
 ## Mijn aanpak
 

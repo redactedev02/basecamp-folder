@@ -3,9 +3,13 @@
 | | |
 |---|---|
 | **Code** | `A1W2P6` |
+| **Soort** | Problem |
+| **Week** | 2 — ma 14 sep t/m vr 18 sep 2026 |
+| **Open vanaf** | 31 aug 2026 |
+| **Af op** | do 17 sep 2026, eind van de dag |
+| **Inleveren** | vr 18 sep 2026 23:59 in CodeGrade |
+| **CodeGrade sluit** | vr 8 jan 2027 23:59 |
 | **CodeGrade** | https://app.codegra.de/courses/21582/assignments/455884 |
-| **Available** | 2026-08-31 |
-| **Deadline** | 2027-01-08 23:59 (CET) |
 
 ---
 

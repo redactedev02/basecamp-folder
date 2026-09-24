@@ -4,8 +4,9 @@
 |---|---|
 | **Code** | `A2W5P6` |
 | **Soort** | Problem |
-| **Week** | 5 |
-| **Deadline** | eind van week 5 (vrijdag 23:59) |
+| **Week** | 5 — ma 5 okt t/m vr 9 okt 2026 |
+| **Af op** | do 8 okt 2026, eind van de dag |
+| **Inleveren** | vr 9 okt 2026 23:59 in CodeGrade |
 | **CodeGrade** | https://app.codegra.de/courses/21582/assignments |
 
 ---
@@ -15,7 +16,7 @@
 > De opleiding zet de omschrijving pas in CodeGrade als week 5 wordt
 > vrijgegeven. Plak hem hier zodra hij er staat, dan heb je hem offline.
 
-Ondersteunend bewijs. Inleveren aan het eind van de week.
+Ondersteunend bewijs. Uiterlijk **vr 9 okt 2026 23:59** in CodeGrade.
 
 ## Mijn aanpak
 

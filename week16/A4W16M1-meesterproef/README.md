@@ -4,8 +4,8 @@
 |---|---|
 | **Code** | `A4W16M1` |
 | **Soort** | Meesterproef |
-| **Week** | 16 |
-| **Deadline** | vr 15 jan 2027 23:59 |
+| **Week** | 16 — ma 11 jan t/m vr 15 jan 2027 |
+| **Inleveren** | vr 15 jan 2027 23:59 in CodeGrade |
 | **CodeGrade** | https://app.codegra.de/courses/21582/assignments |
 
 ---

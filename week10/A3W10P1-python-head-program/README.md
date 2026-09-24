@@ -4,8 +4,9 @@
 |---|---|
 | **Code** | `A3W10P1` |
 | **Soort** | Problem |
-| **Week** | 10 |
-| **Deadline** | eind van week 10 (vrijdag 23:59) |
+| **Week** | 10 — ma 16 nov t/m vr 20 nov 2026 |
+| **Af op** | do 19 nov 2026, eind van de dag |
+| **Inleveren** | vr 20 nov 2026 23:59 in CodeGrade |
 | **CodeGrade** | https://app.codegra.de/courses/21582/assignments |
 
 ---
@@ -15,7 +16,7 @@
 > De opleiding zet de omschrijving pas in CodeGrade als week 10 wordt
 > vrijgegeven. Plak hem hier zodra hij er staat, dan heb je hem offline.
 
-Ondersteunend bewijs. Inleveren aan het eind van de week.
+Ondersteunend bewijs. Uiterlijk **vr 20 nov 2026 23:59** in CodeGrade.
 
 ## Mijn aanpak
 

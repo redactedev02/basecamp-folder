@@ -4,8 +4,9 @@
 |---|---|
 | **Code** | `A4W13P1` |
 | **Soort** | Problem |
-| **Week** | 13 |
-| **Deadline** | eind van week 13 (vrijdag 23:59) |
+| **Week** | 13 — ma 7 dec t/m vr 11 dec 2026 |
+| **Af op** | do 10 dec 2026, eind van de dag |
+| **Inleveren** | vr 11 dec 2026 23:59 in CodeGrade |
 | **CodeGrade** | https://app.codegra.de/courses/21582/assignments |
 
 ---
@@ -15,7 +16,7 @@
 > De opleiding zet de omschrijving pas in CodeGrade als week 13 wordt
 > vrijgegeven. Plak hem hier zodra hij er staat, dan heb je hem offline.
 
-Ondersteunend bewijs. Inleveren aan het eind van de week.
+Ondersteunend bewijs. Uiterlijk **vr 11 dec 2026 23:59** in CodeGrade.
 
 ## Mijn aanpak
 

@@ -235,6 +235,8 @@ i = 7
 for number in range(1, i + i):
 	print(number)
 ```
+For number kondigt de loop aan tot in range(begin, eind); dus 1 tot i+i = 14
+tot slot, print(number), elke loop van for print hij een nummer hoger uit. Van 1 tot 14, niet tot en met 14; daarom eindigt hij op 13
 
 ```python
 # Code 2
@@ -246,6 +248,8 @@ for number in range(i, j):
    else:
        print('Hello')
 ```
+For number kondigt de loop aan tin in de range(begin en eind). In dit geval begint hij op 1 stopt voor 10.
+In de loop controleert hij of het getal groter is dan 5, dus 6 tot 9 print het getal, van 1 tot en met 5 staat er dus Hello
 
 ```python
 # Code 3
@@ -258,6 +262,10 @@ for letter in sentence:
        count = count - 1
 print(count)
 ```
+for letter in sentence betekent voor de len()/ aantal karakters in de string herhaal de for-loop.
+Als het een spatie is telt de count omhoog
+Anders als het een a is gaat er weer een letter van die count af
+Is de loop klaar word de eindscore van count getoond, als ik goed tel zal dit 3 zijn.
 
 ```python
 # Code 4
@@ -265,6 +273,7 @@ sentence = "I just came to say hello!"
 for i in range(0, len(sentence)):
 	print(sentence[i])
 ```
+In dit geval voor de lengte van de volledige sentence; 0, tot len(sentence), word de loop uitgevoerd. Elke loop wordt een karakter uit de zin geprint. [i], kondigt namelijk de positie aan in de string van sentence. Elke ronde zal er bij i dus ook 1 bijkomen, tot hij afgelopen is.
 
 ```python
 # Code 5
@@ -272,3 +281,8 @@ sentence = "I just came to say hello!"
 for c in sentence:
 	print(c)
 ```
+Fout:
+For c in sentence, voor elke c die bestaat binnen sentence wordt de loop x aantal keren uitgevoerd.  In dit geval staat er 1 c in. Print(c) betekent gewoon print gewoon het getal c, die dus begint bij 1.  Stonden er 2 c's dan had deze for loop een 1 geprint en de volgende loop 2, daarna gestopt.
+
+Goed:
+c betekent op zichzelf niks, for c in "sentence" bepaald wat er gaat gebeuren, in dit geval omdat sentence een string is zal hij elk karakter langs gaan. c is dus gewoon het huidige karakter waar de loop is. Daarom print hij dus elke losse letter van de zin op een nieuwe line. c, had net zo goed x kunnen zijn.

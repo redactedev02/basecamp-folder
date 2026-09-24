@@ -3,9 +3,13 @@
 | | |
 |---|---|
 | **Code** | `A1W3A1` |
+| **Soort** | Assignment |
+| **Week** | 3 — ma 21 sep t/m vr 25 sep 2026 |
+| **Open vanaf** | 31 aug 2026 |
+| **Af op** | do 24 sep 2026, eind van de dag |
+| **Inleveren** | vr 25 sep 2026 23:59 in CodeGrade |
+| **CodeGrade sluit** | vr 8 jan 2027 23:59 |
 | **CodeGrade** | https://app.codegra.de/courses/21582/assignments/455899 |
-| **Available** | 2026-08-31 |
-| **Deadline** | 2027-01-08 23:59 (CET) |
 
 ---
 
