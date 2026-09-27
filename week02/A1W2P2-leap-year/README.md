@@ -9,7 +9,7 @@
 | **Af op** | do 17 sep 2026, eind van de dag |
 | **Inleveren** | vr 18 sep 2026 23:59 in CodeGrade |
 | **CodeGrade sluit** | vr 8 jan 2027 23:59 |
-| **CodeGrade** | https://app.codegra.de/courses/21582/assignments/455888 |
+| **CodeGrade** | https://app.codegra.de/courses/21582/assignments/455888/submissions#home |
 
 ---
 

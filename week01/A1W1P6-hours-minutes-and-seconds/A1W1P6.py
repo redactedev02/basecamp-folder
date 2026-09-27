@@ -1,6 +1,6 @@
 # A1W1P6 - Hours, minutes and seconds
 # Description: see README.md in this folder
-# Deadline: 2027-01-08 23:59 (CET)
+# Deadline: 2026-09-11 23:59 (CEST)
 
 # Inputs
 days = int(input("Please name a number of days: "))
